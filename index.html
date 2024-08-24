@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation en IA - Votre Entreprise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Formation en Intelligence Artificielle</h1>
+        <button id="darkModeToggle">Mode Sombre</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#formations">Formations</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="accueil">
+            <h2>Bienvenue sur notre site de formation en IA</h2>
+            <p>Nous proposons des formations de qualité pour vous aider à maîtriser l'Intelligence Artificielle.</p>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Illustration IA" class="main-image">
+            </div>
+        </section>
+        
+        <section id="formations">
+            <h2>Nos Formations</h2>
+            <select id="level-filter">
+                <option value="all">Tous les niveaux</option>
+                <option value="Débutant">Débutant</option>
+                <option value="Intermédiaire">Intermédiaire</option>
+                <option value="Avancé">Avancé</option>
+            </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Durée</th>
+                        <th>Niveau</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Introduction à l'IA</td>
+                        <td>2 jours</td>
+                        <td>Débutant</td>
+                    </tr>
+                    <tr>
+                        <td>Machine Learning avancé</td>
+                        <td>5 jours</td>
+                        <td>Intermédiaire</td>
+                    </tr>
+                    <tr>
+                        <td>Deep Learning et réseaux de neurones</td>
+                        <td>4 jours</td>
+                        <td>Avancé</td>
+                    </tr>
+                    <tr>
+                        <td>IA pour le traitement du langage naturel</td>
+                        <td>3 jours</td>
+                        <td>Intermédiaire</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="formation-carousel" class="formation-images">
+                <button id="prevSlide">&lt;</button>
+                <div class="formation-image">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Introduction à l'IA">
+                    <p>Introduction à l'IA</p>
+                </div>
+                <div class="formation-image">
+                    <img src="https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Machine Learning avancé">
+                    <p>Machine Learning avancé</p>
+                </div>
+                <div class="formation-image">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1465&q=80" alt="Deep Learning">
+                    <p>Deep Learning et réseaux de neurones</p>
+                </div>
+                <div class="formation-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Traitement du langage naturel">
+                    <p>IA pour le traitement du langage naturel</p>
+                </div>
+                <button id="nextSlide">&gt;</button>
+            </div>
+        </section>
+        
+        <section id="apropos">
+            <h2>À propos de nous</h2>
+            <p>Notre entreprise est spécialisée dans la formation en Intelligence Artificielle. Nous avons une équipe d'experts passionnés prêts à partager leurs connaissances.</p>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Notre équipe" class="main-image">
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form" action="https://formspree.io/f/mwpeaqol" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+            <div id="form-message"></div>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Contactez-nous" class="main-image">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Votre Entreprise de Formation en IA. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
